@@ -27,6 +27,7 @@ Player.CharacterAdded:Connect(function()
             if Recipient ~= nil then
                 loop = game:GetService('RunService').Stepped:Connect(function()
                     pcall(function()
+                    task.wait()
                         local hrp = Char.HumanoidRootPart
                         local target = game.Players:FindFirstChild(Recipient).Character:WaitForChild("Humanoid")
                         hrp.CFrame = target.RootPart.CFrame + target.RootPart.CFrame.LookVector * 20
@@ -55,6 +56,7 @@ Player.Chatted:Connect(function(Message)
         if Recipient ~= nil then
             loop = game:GetService('RunService').Stepped:Connect(function()
                 pcall(function()
+                task.wait()
                     local hrp = Char.HumanoidRootPart
                     local target = game.Players:FindFirstChild(Recipient).Character:WaitForChild("Humanoid")
                     hrp.CFrame = target.RootPart.CFrame + target.RootPart.CFrame.LookVector * 20
